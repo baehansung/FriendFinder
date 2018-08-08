@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Friend Finder - Survey</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <style>
+        .container {
+            background-color: rgb(240, 240, 245);
+            border-radius: 15px;
+            padding-top: 1%;
+            padding-bottom: 1%;
+            margin-top: 2%;
+            margin-bottom: 3%;
+        }
+
+        .top-title {
+            margin-top: 2%;
+            margin-bottom: 4%;
+        }
+
+        #usr-info {
+            margin-bottom: 4%;
+        }
+
+        .questions {
+            margin-top: 2%;
+        }
+
+        #submit-btn {
+            margin-top: 3%;
+            margin-bottom: 4%;
+        }
+
+        .links {
+            margin-bottom: 2%;
+        }
+  </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="top-title"><i class="fas fa-user-friends"></i>
+            FriendFinder - Survey
+        </h1>
+    </div>
+
+    <!-- User name and photo input -->
+    <div class="container" id="usr-info">
+        <h2><strong>User Information</strong></h2>
+        <div class="form-group">
+            <label for="usr">Name (Required)</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+        <div class="form-group">
+            <label for="usr">Link to Photo Image (Required)</label>
+            <input type="text" class="form-control" id="usr">
+        </div>
+    </div>
+    
+    <!-- Dropdown menu -->
+    <div class="container">
+        
+        <!-- Question 1 -->
+        <div class="questions" id="1">
+            <h4><strong>Question 1</strong></h4>
+            <h5>You love to travel, willing to go to a new place once a year at the minimum</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="questions" id="2">
+            <h4><strong>Question 2</strong></h4>
+            <h5>You can watch movies/TV shows/Netflix all day long</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="questions" id="3">
+            <h4><strong>Question 3</strong></h4>
+            <h5>You follow politics closely and don't mind having political conversations</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="questions" id="4">
+            <h4><strong>Question 4</strong></h4>
+            <h5>You love big cities, and prefer them over the country-side or suburban areas</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="questions" id="5">
+            <h4><strong>Question 5</strong></h4>
+            <h5>You love sports and can watch/talk about sports anytime</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="questions" id="6">
+            <h4><strong>Question 6</strong></h4>
+            <h5>If you are not talking, you are probably thinking/talking to yourself about something</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="questions" id="7">
+            <h4><strong>Question 7</strong></h4>
+            <h5>You enjoy the outdoors. From running/biking to camping/hiking</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 8 -->
+        <div class="questions" id="8">
+            <h4><strong>Question 8</strong></h4>
+            <h5>You believe in a religion/consider yourself religious</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 9 -->
+        <div class="questions" id="9">
+            <h4><strong>Question 9</strong></h4>
+            <h5>You love being social, and prefer to be around people as often as possible</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- Question 10 -->
+        <div class="questions" id="10">
+            <h4><strong>Question 10</strong></h4>
+            <h5>Beer = 5, Wine = 4, Liquor = 3, All Three(Beer/Liquor/Wine) = 2, None = 1</h5>
+            <select>
+                <option value="0">Select Most Applicable</option>
+                <option value="1">1 (Strongly Disagree)</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5 (Strongly Agree)</option>
+            </select>
+        </div>
+
+        <!-- button user will click when finished answering survey -->
+        <button type="button" class="btn btn-primary btn-lg btn-block" id="submit-btn">Submit</button>
+
+        <!-- links to API data or Github -->
+        <div class="links">
+            <a href="https://www.w3schools.com/html/">Friend List API</a>
+            | 
+            <a href="https://www.w3schools.com/html/"> GitHub Repo</a>
+        </div>
+
+    </div>
+
+
+
+  <script type="text/javascript">
+
+
+    $(document).ready(function() {
+        $(".dropdown-toggle").dropdown();
+    });
+
+
+    $("#search-btn").on("click", function() {
+      var searchedCharacter = $("#character-search").val().trim();
+
+      // Using a RegEx Pattern to remove spaces from searchedCharacter
+      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
+
+      $.get("/api/characters/" + searchedCharacter, function(data) {
+        console.log(data);
+        if (data) {
+          $("#stats").show();
+          $("#name").text(data.name);
+          $("#role").text(data.role);
+          $("#age").text(data.age);
+          $("#force-points").text(data.forcePoints);
+        }
+        else {
+          $("#name").text("The force is not strong with this one. Your character was not found.");
+          $("#stats").hide();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
