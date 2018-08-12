@@ -3,7 +3,7 @@
 
 var friendsData = [
     {
-        "name":"Ahmed",
+        "name":"Girl",
         "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
         "scores":[
             5,
@@ -16,6 +16,22 @@ var friendsData = [
             5,
             4,
             1
+        ]      
+    },
+    {
+        "name":"Guy",
+        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "scores":[
+            1,
+            3,
+            4,
+            4,
+            2,
+            1,
+            5,
+            1,
+            5,
+            5
         ]      
     }
   ];

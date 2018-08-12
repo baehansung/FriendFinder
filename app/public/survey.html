@@ -55,11 +55,11 @@
         <h2><strong>User Information</strong></h2>
         <div class="form-group">
             <label for="usr">Name (Required)</label>
-            <input type="text" class="form-control" id="usr">
+            <input type="text" class="form-control" id="name" required>
         </div>
         <div class="form-group">
             <label for="usr">Link to Photo Image (Required)</label>
-            <input type="text" class="form-control" id="usr">
+            <input type="text" class="form-control" id="img" required>
         </div>
     </div>
     
@@ -67,10 +67,10 @@
     <div class="container">
         
         <!-- Question 1 -->
-        <div class="questions" id="1">
+        <div class="questions">
             <h4><strong>Question 1</strong></h4>
             <h5>You love to travel, willing to go to a new place once a year at the minimum</h5>
-            <select>
+            <select id="q1">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -81,10 +81,10 @@
         </div>
 
         <!-- Question 2 -->
-        <div class="questions" id="2">
+        <div class="questions">
             <h4><strong>Question 2</strong></h4>
             <h5>You can watch movies/TV shows/Netflix all day long</h5>
-            <select>
+            <select id="q2">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -95,10 +95,10 @@
         </div>
 
         <!-- Question 3 -->
-        <div class="questions" id="3">
+        <div class="questions">
             <h4><strong>Question 3</strong></h4>
             <h5>You follow politics closely and don't mind having political conversations</h5>
-            <select>
+            <select id="q3">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -109,10 +109,10 @@
         </div>
 
         <!-- Question 4 -->
-        <div class="questions" id="4">
+        <div class="questions">
             <h4><strong>Question 4</strong></h4>
             <h5>You love big cities, and prefer them over the country-side or suburban areas</h5>
-            <select>
+            <select id="q4">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -123,10 +123,10 @@
         </div>
 
         <!-- Question 5 -->
-        <div class="questions" id="5">
+        <div class="questions">
             <h4><strong>Question 5</strong></h4>
             <h5>You love sports and can watch/talk about sports anytime</h5>
-            <select>
+            <select id="q5">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -137,10 +137,10 @@
         </div>
 
         <!-- Question 6 -->
-        <div class="questions" id="6">
+        <div class="questions">
             <h4><strong>Question 6</strong></h4>
             <h5>If you are not talking, you are probably thinking/talking to yourself about something</h5>
-            <select>
+            <select id="q6">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -151,10 +151,10 @@
         </div>
 
         <!-- Question 7 -->
-        <div class="questions" id="7">
+        <div class="questions">
             <h4><strong>Question 7</strong></h4>
             <h5>You enjoy the outdoors. From running/biking to camping/hiking</h5>
-            <select>
+            <select id="q7">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -165,10 +165,10 @@
         </div>
 
         <!-- Question 8 -->
-        <div class="questions" id="8">
+        <div class="questions">
             <h4><strong>Question 8</strong></h4>
             <h5>You believe in a religion/consider yourself religious</h5>
-            <select>
+            <select id="q8">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -179,10 +179,10 @@
         </div>
 
         <!-- Question 9 -->
-        <div class="questions" id="9">
+        <div class="questions">
             <h4><strong>Question 9</strong></h4>
             <h5>You love being social, and prefer to be around people as often as possible</h5>
-            <select>
+            <select id="q9">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -193,10 +193,10 @@
         </div>
 
         <!-- Question 10 -->
-        <div class="questions" id="10">
+        <div class="questions">
             <h4><strong>Question 10</strong></h4>
             <h5>Beer = 5, Wine = 4, Liquor = 3, All Three(Beer/Liquor/Wine) = 2, None = 1</h5>
-            <select>
+            <select id="q10">
                 <option value="0">Select Most Applicable</option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -207,13 +207,38 @@
         </div>
 
         <!-- button user will click when finished answering survey -->
-        <button type="button" class="btn btn-primary btn-lg btn-block" id="submit-btn">Submit</button>
+        <button type="button" data-toggle="modal" data-target="#bestFriendModal" class="btn btn-primary btn-lg btn-block" id="submit-btn">
+            Submit
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="bestFriendModal" tabindex="-1" role="dialog" aria-labelledby="bestFriendModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="bestfriendModalLabel">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Your Best Friend Match Is...</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <h6 id="bestFriend"></h6>
+                        <img id="bfImg" src="">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- links to API data or Github -->
         <div class="links">
-            <a href="https://www.w3schools.com/html/">Friend List API</a>
+            <a href="/api/friends">Friend List API</a>
             | 
-            <a href="https://www.w3schools.com/html/"> GitHub Repo</a>
+            <a href="https://github.com/baehansung/FriendFinder"> GitHub Repo</a>
         </div>
 
     </div>
@@ -222,34 +247,41 @@
 
   <script type="text/javascript">
 
-
     $(document).ready(function() {
-        $(".dropdown-toggle").dropdown();
+        
+        $("#submit-btn").on("click", function() {
+            
+            // friendData contains new users data that they put into input
+            var userData = {
+                name: $("#name").val().trim(),
+                photo: $("#img").val().trim(),
+                scores: [
+                    $("#q1").val().trim(),
+                    $("#q2").val().trim(),
+                    $("#q3").val().trim(),
+                    $("#q4").val().trim(),
+                    $("#q5").val().trim(),
+                    $("#q6").val().trim(),
+                    $("#q7").val().trim(),
+                    $("#q8").val().trim(),
+                    $("#q9").val().trim(),
+                    $("#q10").val().trim(),
+                ]
+            };
+
+
+            //Modal does not show the name or image of the match needs fixing
+            $.post('/api/friends', userData, function(data){
+                $("#bestFriend").html(data.name);
+                $("bfImg").attr("src", data.photo);
+
+                $("#bestFriendModal").modal("toggle");
+            });
+
+        });
+
     });
 
-
-    $("#search-btn").on("click", function() {
-      var searchedCharacter = $("#character-search").val().trim();
-
-      // Using a RegEx Pattern to remove spaces from searchedCharacter
-      // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-      searchedCharacter = searchedCharacter.replace(/\s+/g, "").toLowerCase();
-
-      $.get("/api/characters/" + searchedCharacter, function(data) {
-        console.log(data);
-        if (data) {
-          $("#stats").show();
-          $("#name").text(data.name);
-          $("#role").text(data.role);
-          $("#age").text(data.age);
-          $("#force-points").text(data.forcePoints);
-        }
-        else {
-          $("#name").text("The force is not strong with this one. Your character was not found.");
-          $("#stats").hide();
-        }
-      });
-    });
   </script>
 
 </body>
